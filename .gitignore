@@ -1,19 +1,19 @@
 # --- BACKEND PHP ---
-backend/config/db.php
+backend/vendor/
 backend/public/css/*.map
 backend/public/css/*.scss
-backend/vendor/
+backend/.phpunit.result.cache
 
-# --- FRONTEND VITE ---
+# --- FRONTEND ---
 frontend/node_modules/
 frontend/dist/
 frontend/.vite/
 
-# --- ENV FILES ---
+# --- ENV ---
 *.env
 .env.local
 .env.*.local
 
-# --- SYSTEM FILES ---
+# --- SYSTEM ---
 .DS_Store
 Thumbs.db

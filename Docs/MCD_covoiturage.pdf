@@ -1,0 +1,11 @@
+UTILISATEUR (id, nom, prenom, email, password, telephone, role)
+
+AGENCE (id, nom)
+
+TRAJET (id, date_depart, date_arrivee, places_total, places_disponibles,
+        user_id, depart_id, arrivee_id)
+
+Clés étrangères :
+- TRAJET.user_id → UTILISATEUR.id
+- TRAJET.depart_id → AGENCE.id
+- TRAJET.arrivee_id → AGENCE.id

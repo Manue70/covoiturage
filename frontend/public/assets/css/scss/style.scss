@@ -1,0 +1,241 @@
+// ========================
+// Variables perso
+// ========================
+@import "variables";
+
+// ========================
+// Imports Bootstrap
+// ========================
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/maps";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/root";
+@import "../../../../node_modules/bootstrap/scss/reboot";
+@import "../../../../node_modules/bootstrap/scss/grid";
+@import "../../../../node_modules/bootstrap/scss/buttons";
+@import "../../../../node_modules/bootstrap/scss/forms";
+@import "../../../../node_modules/bootstrap/scss/modal";
+@import "../../../../node_modules/bootstrap/scss/navbar";
+@import "../../../../node_modules/bootstrap/scss/tables";
+
+// ========================
+// Styles globaux
+// ========================
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $light;
+  color: $dark;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// ========================
+// Navbar
+// ========================
+.navbar {
+  background-color: $primary !important;
+
+  .navbar-brand {
+    color: #fff !important;
+  }
+
+  .nav-link, .btn {
+    color: #fff !important;
+  }
+
+  // bouton de connexion
+  .btn-login {
+    margin-left: 1rem; // espace depuis le nom du site
+    color: $primary !important;
+    background-color: #fff !important;
+  
+  }
+}
+
+.navbar-actions {
+  margin-left: auto; // pousse le bloc à droite
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; // espace entre les boutons / span
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+// ========================
+// Container principal
+// ========================
+.container-main {
+  flex: 1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+// ========================
+// Titres
+// ========================
+h1 {
+  color: $primary;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+// ========================
+// Tableau
+// ========================
+.table {
+  border: 1px solid $dark;
+  
+  
+  th, td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  th {
+    background-color: $secondary;
+    color: $light;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: $light;
+  }
+}
+
+// ========================
+// Boutons
+// ========================
+.btn-info {
+  background-color: $primary;
+  border-color: $primary;
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
+}
+
+.btn-warning {
+  background-color: $secondary;
+  border-color: $secondary;
+  &:hover {
+    background-color: darken($secondary, 10%);
+  }
+}
+
+.btn-danger {
+  background-color: $danger;
+  border-color: $danger;
+  &:hover {
+    background-color: darken($danger, 10%);
+  }
+}
+
+.btn-success {
+  background-color: $success;
+  border-color: $success;
+  &:hover {
+    background-color: darken($success, 10%);
+  }
+}
+
+// ========================
+// Modale
+// ========================
+.modal-content {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+// ========================
+// Footer
+// ========================
+footer {
+  background-color: $dark;
+  color: #0074c7;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+// ========================
+// Responsive Mobile (max-width: 768px)
+// ========================
+@media (max-width: 768px) {
+
+  // Empêche le scroll horizontal
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+
+  }
+
+  // Container principal
+  .container-main {
+    padding: 0 0.5rem; // marge intérieure réduite
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  // Tableau
+  .table {
+    width: 100%;
+    font-size: 0.85rem;
+
+    th, td {
+      padding: 0.25rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: $light;
+    }
+  }
+
+  // Boutons
+  .btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  // Navbar
+  .navbar {
+    width: 100% !important;
+    flex-wrap: wrap; // s'adapte aux petits écrans
+    padding:0;
+
+    .btn-login {
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .navbar-actions {
+      width: 100%;
+      justify-content: flex-start;
+      margin-top: 0.5rem;
+    }
+  }
+
+  // Footer
+  footer {
+    width: 100% !important;
+    padding: 1rem 0;
+    margin-top: auto;
+    box-sizing: border-box;
+    margin: 0;
+
+  }
+  footer p{
+    margin:0
+  }
+}
